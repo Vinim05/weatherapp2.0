@@ -1,5 +1,6 @@
 package com.example.weatherapp.Activity
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             progressBar.visibility = View.VISIBLE
             weatherViewModel.loadCurrentWeather(lat, lon, "Imperial").enqueue(object :
                 retrofit2.Callback<CurrentResponseApi> {
+                @SuppressLint("SetTextI18n")
                 override fun onResponse(
                     call: Call<CurrentResponseApi>,
                     response: Response<CurrentResponseApi>
