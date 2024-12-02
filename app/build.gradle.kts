@@ -9,12 +9,12 @@ plugins {
 
 android {
     namespace = "com.example.weatherapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.weatherapp"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -69,18 +69,16 @@ dependencies {
 
     //gson
     implementation("com.google.code.gson:gson:2.10.1")
-
-    //other
-    implementation("com.github.MatteoBattilana:WeatherView:3.0.0")
+    
 
     //viewmodel
     implementation("androidx.activity:activity-ktx:1.9.3")
-    implementation("com.github.Dimezis:BlueView:2.0.3")
+    implementation ("com.github.Dimezis:BlurView:version-2.0.5")
     implementation("com.github.bumptech.glide:glide:4.12.0")
+
 }
 
 kapt{
     correctErrorTypes = true
 }
-
 
