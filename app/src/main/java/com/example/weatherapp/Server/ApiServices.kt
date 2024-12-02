@@ -1,5 +1,6 @@
 package com.example.weatherapp.Server
 
+import com.example.weatherapp.model.CityResponseAPI
 import com.example.weatherapp.model.CurrentResponseApi
 import com.example.weatherapp.model.ForecastResponseAPI
 import retrofit2.Call
@@ -23,4 +24,11 @@ interface ApiServices {
         @Query("appid") ApiKey:String,
     ):Call<ForecastResponseAPI>
 
+
+    @GET("geo/1.0/direct")
+    fun getCitiesList(
+        @Query("q") q:String,
+        @Query("limit") limit:Int,
+        @Query("appid") ApiKey:String,
+    ):Call<CityResponseAPI>
 }
