@@ -50,6 +50,18 @@ class MainActivity : AppCompatActivity() {
                 name = "Brecksville"
             }
 
+            if (name == "Cincinnati") {
+                lat = 39.1031
+                lon = -84.5120
+                name = "Cincinnati"
+            }
+
+            if (name == "Orlando") {
+                lat = 28.5384
+                lon = -81.3789
+                name = "Orlando"
+            }
+
 
             addCity.setOnClickListener {
                 startActivity(Intent(this@MainActivity, CityListActivity::class.java))
